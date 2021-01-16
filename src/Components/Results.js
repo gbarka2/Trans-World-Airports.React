@@ -3,7 +3,7 @@ import Airport from './Airport'
 
 const Results = (props) => {
   return (
-    <div>Results Component
+    <div className="results">Results Component
       <Airport />
     </div>
 

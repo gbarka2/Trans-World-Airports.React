@@ -4,7 +4,7 @@ import Results from '../Components/Results'
 
 const Main = (props) => {
   return (
-    <div>Main Page
+    <div className="main">
       <Search />
       <Results />
     </div>

@@ -1,9 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
-import React, {useEffect, useState} from 'react'
 import Nav from './Components/Nav'
-import Favorites from './Pages/Favorites';
 import Main from './Pages/Main'
+import Favorites from './Pages/Favorites';
 
 function App() {
 
@@ -12,10 +10,10 @@ function App() {
   
 
   return (
-    <div className="App">
-      <Nav />
+    <div className="app">
       <Main />
       <Favorites />
+      <Nav />
 
       {/* switch
       routes and paths */}
