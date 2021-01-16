@@ -1,10 +1,10 @@
-body {
+html, body {
   height: vh100;
   width: vw100;
 }
 
 .app {
-  height: vh100;
+  height: 600px;
   width: vw100;
   display: grid;
   grid-template-columns: 1fr;
@@ -33,4 +33,21 @@ body {
   display: flex;
   grid-column: 1 / 2;
   grid-row: 4 / 5;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.airport-card {
+  border: 1px solid red;
+  height: 200px;
+  width: 150px;
+}
+
+.favorites-bar {
+  border: 1px solid blue;
+  display: flex;
+  justify-content: space-around;
 }
