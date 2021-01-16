@@ -51,3 +51,7 @@ html, body {
   display: flex;
   justify-content: space-around;
 }
+
+i {
+  height: 100px;
+}

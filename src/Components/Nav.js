@@ -1,17 +1,21 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faPaperPlane} from "@fortawesome/free-solid-svg-icons"
+import {faHome} from "@fortawesome/free-solid-svg-icons"
+import {faHeart} from "@fortawesome/free-solid-svg-icons"
 
 const Nav = (props) => {
   return (
     <div className="nav">
       <Link to="/">
-        <h2>Logo Goes Here</h2>
+        <FontAwesomeIcon icon={faPaperPlane} />
       </Link>
       <Link to="/">
-        <h2>"Back To Main"</h2>
+        <FontAwesomeIcon icon={faHome} />
       </Link>
       <Link to="/favorites">
-        <h2>Favorites</h2>
+        <FontAwesomeIcon icon={faHeart} />
       </Link>
     </div>
   )
