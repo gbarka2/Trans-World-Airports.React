@@ -4,10 +4,10 @@ import Results from '../Components/Results'
 
 const Main = (props) => {
   return (
-    <div className="main">
-      <Search />
-      <Results />
-    </div>
+      <div className="main">
+        <Search />
+        <Results />
+      </div>
   )
 }
 
