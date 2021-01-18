@@ -1,33 +1,43 @@
-import React from 'react'
+import React, { createContext, useContext, useState } from 'react'
 
-// const apiKey = "289810-c1b873"
+const initialState = {
+  name: null
+}
 
-// const url = `http://aviation-edge.com/v2/public/autocomplete?key=${apiKey}&city=new_york`
+export const CityContext = createContext(null)
+export const useGlobalState = () => {
+  return useContext(CityContext)
+}
+const apiKey = "289810-c1b873"
 
-
-// const [city, setCity] = useState()
-// const getCity = async () => {
-//   const response = await fetch(url)
-//   const data = await response.json()
-//   setCity(data)
+export const GlobalState = (props) => {
+  const globalCity = {
+    city: ''
+  }
+  // console.log('City', globalCity.city)
   
-// }
+  const [city, setCity] = useState()
 
-// useEffect(() => {
-//   getCity()
-// }, [])
+  const url = `http://aviation-edge.com/v2/public/autocomplete?key=${apiKey}&city=${city}`
+  const getCity = async () => {
+    const response = await fetch(url)
+    const data = await response.json()
+    // console.log('global city', city)
+    // console.log('airport data', data)
+    // console.log('airports in area', airports.airportsByCities)
+    // setCity(data)
+  }
+
+  
+  return (
+    <CityContext.Provider value={{city, setCity, globalCity, getCity}}>
+      {props.children}
+    </CityContext.Provider>
+  )
 
 
-// const loaded = () => {
-  //aiports in search area
-  // console.log('airports in area', airports.airportsByCities)
 
-  //aiport code
-  // console.log('airport code', airports.airportsByCities[0].codeIataAirport)
-// }
 
-// const loading = () => {
-//   return <h1>Loading...</h1>
-// }
 
-// {airports ? loaded() : loading()}
+
+}

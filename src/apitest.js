@@ -13,3 +13,17 @@
 // }
 
 // getAirport()
+
+// const loaded = () => {
+  //aiports in search area
+  // console.log('airports in area', airports.airportsByCities)
+
+  //aiport code
+  // console.log('airport code', airports.airportsByCities[0].codeIataAirport)
+// }
+
+// const loading = () => {
+//   return <h1>Loading...</h1>
+// }
+
+// {airports ? loaded() : loading()
