@@ -17,6 +17,9 @@ export const GlobalState = (props) => {
   
   const [city, setCity] = useState()
   const [data, setData] = useState()
+  const [favorites, setFavorites] = useState({
+    // ...favorites
+  })
 
   const url = `http://aviation-edge.com/v2/public/autocomplete?key=${apiKey}&city=${city}`
   const getCity = async () => {
@@ -29,7 +32,7 @@ export const GlobalState = (props) => {
 
   
   return (
-    <CityContext.Provider value={{data, city, setCity, getCity}}>
+    <CityContext.Provider value={{data, city, setCity, getCity, setFavorites, favorites}}>
       {props.children}
     </CityContext.Provider>
   )

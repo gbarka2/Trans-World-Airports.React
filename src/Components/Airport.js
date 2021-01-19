@@ -7,19 +7,14 @@ import {faClock} from "@fortawesome/free-solid-svg-icons"
 import {faHeart} from "@fortawesome/free-solid-svg-icons"
 import {useGlobalState} from '../GlobalState'
 
-const Airport = ({airport}) => {
+const Airport = ({airport, favorites}) => {
 
-  // const CityContext = useGlobalState()
-  console.log(airport)
-  
-      // return {
-      //   key: index,
-      //   iataAirport: airport.codeIataAirport,
-      //   iataCity: airport.codeIataCity,
-      //   name: airport.nameAirport,
-      //   country: airport.nameCountry,
-      //   timezone: airport.timezone
-      // }
+  const CityContext = useGlobalState()
+
+  const handleFavorites = () => {
+    CityContext.setFavorites(airport)
+    console.log('favorite set', CityContext.favorites)
+  }
 
     return (
       <div>
@@ -47,7 +42,7 @@ const Airport = ({airport}) => {
                 <p>{airport.timezone}</p>
               </div>
               <div>
-                <FontAwesomeIcon icon={faHeart} id="heart"/>
+                <FontAwesomeIcon icon={faHeart} id="heart" onClick={handleFavorites}/>
               </div>
             </div>
           </div>

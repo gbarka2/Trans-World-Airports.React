@@ -7,8 +7,6 @@ const Results = (props) => {
 
   const CityContext = useGlobalState()
 
-
-console.log(CityContext)
   return (
 
     <>
