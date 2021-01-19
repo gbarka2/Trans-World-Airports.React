@@ -14,8 +14,7 @@ const Search = (props) => {
 
   const handleSubmit = (event) => {
     CityContext.getCity()
-    console.log('handlesubmit', CityContext.city)
-
+    // console.log('handlesubmit', CityContext.city)
   }
 
   return (

@@ -41,17 +41,21 @@ html, body {
 }
 
 .airport-card {
-  border: 1px solid red;
-  height: 200px;
-  width: 150px;
+  height: 250px;
+  width: 200px;
+  margin: 30px;
+
 }
 
-.favorites-bar {
+.card-row {
   border: 1px solid blue;
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  height: 50px;
 }
 
-i {
-  height: 100px;
+.airport-icon {
+  margin-right: 5px;
+  margin-left: 5px;
 }

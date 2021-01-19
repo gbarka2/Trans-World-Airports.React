@@ -1,16 +1,16 @@
 import React from 'react'
 import Airport from './Airport'
-import {useGlobalState} from '../GlobalState'
+// import {useGlobalState} from '../GlobalState'
 
 const Results = (props) => {
 
-  const CityContext = useGlobalState()
-  
+  // const CityContext = useGlobalState()
+
 
   return (
-    <div className="results">Results Component
+    // <div className="results">
       <Airport />
-    </div>
+    // </div>
 
   )
 }
