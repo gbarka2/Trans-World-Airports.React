@@ -14,7 +14,6 @@ export const GlobalState = (props) => {
   const globalCity = {
     city: ''
   }
-  // console.log('City', globalCity.city)
   
   const [city, setCity] = useState()
 
@@ -22,15 +21,13 @@ export const GlobalState = (props) => {
   const getCity = async () => {
     const response = await fetch(url)
     const data = await response.json()
-    // console.log('global city', city)
-    // console.log('airport data', data)
-    // console.log('airports in area', airports.airportsByCities)
-    // setCity(data)
+    console.log('global city', city)
+    console.log('data', data)
   }
 
   
   return (
-    <CityContext.Provider value={{city, setCity, globalCity, getCity}}>
+    <CityContext.Provider value={{city, setCity, getCity}}>
       {props.children}
     </CityContext.Provider>
   )

@@ -1,11 +1,11 @@
 import React from 'react'
 import Airport from './Airport'
+import {useGlobalState} from '../GlobalState'
 
 const Results = (props) => {
 
-// useEffect(() => {
-//   getCity()
-// }, [])
+  const CityContext = useGlobalState()
+  
 
   return (
     <div className="results">Results Component
