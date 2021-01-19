@@ -7,38 +7,10 @@ import {faClock} from "@fortawesome/free-solid-svg-icons"
 import {faHeart} from "@fortawesome/free-solid-svg-icons"
 import {useGlobalState} from '../GlobalState'
 
-const Airport = (props) => {
+const Airport = ({airport}) => {
 
-  const CityContext = useGlobalState()
-  
-  const loaded = () => {
-    const cityMapped = CityContext.data.airportsByCities.map((airport, index) => {
-      console.log('airport data', CityContext.city)
-
-      return (
-          <div className="airport-card" key={index}>
-            <div className="card-row">
-              <FontAwesomeIcon icon={faPlaneDeparture} className="airport-icon"/>
-              <p>{airport.codeIataAirport}</p>
-            </div>
-            <div className="card-row">
-              <p>{airport.nameAirport}</p>
-            </div>
-            <div className="card-row">
-              <FontAwesomeIcon icon={faCity} className="airport-icon"/>
-              <p>{airport.codeIataCity} - {CityContext.city}</p>
-            </div>
-            <div className="card-row">
-              <FontAwesomeIcon icon={faFlag} className="airport-icon" />
-              <p>{airport.nameCountry}</p>
-            </div>
-            <div className="card-row">
-              <FontAwesomeIcon icon={faClock} className="airport-icon"/>
-              <p>{airport.timezone}</p>
-              <FontAwesomeIcon icon={faHeart}/>
-            </div>
-          </div>
-      )
+  // const CityContext = useGlobalState()
+  console.log(airport)
   
       // return {
       //   key: index,
@@ -48,27 +20,41 @@ const Airport = (props) => {
       //   country: airport.nameCountry,
       //   timezone: airport.timezone
       // }
-    })
+
     return (
       <div>
-        {cityMapped}
+        {
+          airport ?
+          <div className="airport-card">
+            <div className="card-row">
+              <FontAwesomeIcon icon={faPlaneDeparture} className="airport-icon"/>
+              <p>{airport.codeIataAirport}</p>
+            </div>
+            <div className="card-row">
+              <p id="airport-name">{airport.nameAirport}</p>
+            </div>
+            <div className="card-row">
+              <FontAwesomeIcon icon={faCity} className="airport-icon"/>
+              <p>{airport.codeIataCity}</p>
+            </div>
+            <div className="card-row">
+              <FontAwesomeIcon icon={faFlag} className="airport-icon" />
+              <p>{airport.nameCountry}</p>
+            </div>
+            <div className="card-row" id="favorite-row">
+              <div id="fave-row-1">
+                <FontAwesomeIcon icon={faClock} className="airport-icon"/>
+                <p>{airport.timezone}</p>
+              </div>
+              <div>
+                <FontAwesomeIcon icon={faHeart} id="heart"/>
+              </div>
+            </div>
+          </div>
+          : ""
+        }
       </div>
     )
-    // console.log(airport.key)
-   
-  }
-
-
-  const loading = () => {
-    return <div>Loading...</div>
-  }
-
-
-  return (
-    <div>
-      {CityContext.data ? loaded() : loading()}
-    </div>
-  )
 }
 
 export default Airport

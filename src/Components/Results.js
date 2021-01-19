@@ -1,16 +1,26 @@
 import React from 'react'
 import Airport from './Airport'
-// import {useGlobalState} from '../GlobalState'
+import {useGlobalState} from '../GlobalState'
+
 
 const Results = (props) => {
 
-  // const CityContext = useGlobalState()
+  const CityContext = useGlobalState()
 
 
+console.log(CityContext)
   return (
-    // <div className="results">
-      <Airport />
-    // </div>
+
+    <>
+      {
+        CityContext.data !== undefined ?
+        CityContext.data.airportsByCities.map((airport, index) => (
+        <Airport airport={airport} key={index}/>
+        ))
+        : ""
+      }
+    </>
+
 
   )
 }

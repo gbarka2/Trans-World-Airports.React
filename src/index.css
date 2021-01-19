@@ -42,7 +42,7 @@ html, body {
 
 .airport-card {
   height: 250px;
-  width: 200px;
+  width: 225px;
   margin: 30px;
 
 }
@@ -55,7 +55,26 @@ html, body {
   height: 50px;
 }
 
+#airport-name {
+  margin-left: 7px;
+}
+
+#favorite-row {
+  display: flex;
+  justify-content: ;
+  align-items: center;
+}
+
+#fave-row-1 {
+  display: flex;
+  align-items: center;
+}
+
 .airport-icon {
   margin-right: 5px;
   margin-left: 5px;
+}
+
+#heart {
+  margin-left: 20px;
 }
