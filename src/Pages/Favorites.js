@@ -9,13 +9,13 @@ const Favorites = (props) => {
   return (
 
     <>
-      {/* {
+      {
         CityContext.favorites !== undefined ?
         CityContext.favorites.map((airport, index) => (
         <Airport airport={airport} key={index}/>
         ))
         : ""
-      } */}
+      }
     </>
 
 
