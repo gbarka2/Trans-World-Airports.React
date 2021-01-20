@@ -8,7 +8,7 @@ const apiKey = "289810-c1b873"
 
 export const GlobalState = (props) => {
   
-  const [city, setCity] = useState()
+  const [city, setCity] = useState("")
   const [data, setData] = useState()
   const [favorites, setFavorites] = useState([])
 
@@ -18,6 +18,7 @@ export const GlobalState = (props) => {
     const data = await response.json()
     // console.log('global city', city)
     // console.log('data', data)
+    data.airportByCities = []
     setData(data)
   }
 

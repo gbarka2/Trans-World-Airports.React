@@ -1,13 +1,13 @@
 html, body {
   height: 100%;
-  width: 100vw;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
 
 .app {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,17 +24,12 @@ html, body {
   grid-template-rows: 1fr 2fr; */
 }
 
-.search {
-  /* grid-column: 1 / 2;
-  grid-row: 1 / 2; */
-  display: flex;
-  justify-content: center;
-}
+
 
 .results {
   /* grid-column: 1 / 2;
   grid-row: 2 / 3; */
-  margin-bottom: 75px;
+  margin-bottom: 125px;
 }
 
 .title {
@@ -44,12 +39,14 @@ html, body {
 
 #title-plane {
   font-size: 41px;
+  color: #457EAC;
 }
 
 #title {
   margin-bottom: 0px;
   padding-bottom: 8px;
   padding-left: 5px;
+  color: #457EAC;
 }
 
 #subtitle {
@@ -65,7 +62,7 @@ html, body {
   /* padding: 10px; */
   width: 100%;
   margin-right: 0px;
-  background-color: black;
+  background-color: #457EAC;
   position: fixed;
   bottom: 0;
   padding-top: 5px;
@@ -85,6 +82,31 @@ html, body {
 
 #home {
   padding-right: 24px;
+}
+
+.search {
+  /* grid-column: 1 / 2;
+  grid-row: 1 / 2; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  border-color: #457EAC;
+  font-size: 23px;
+  color: #457EAC;
+  border-radius: 5px;
+  border-image: none;
+  background-color: white;
+}
+
+#search-icon {
+  font-size: 25px;
+  background-color: #457EAC;
+  padding: 4px;
+  color: white;
+  border-radius: 5px;
 }
 
 .airport-card {

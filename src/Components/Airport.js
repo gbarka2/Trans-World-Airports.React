@@ -12,11 +12,18 @@ const Airport = ({airport}) => {
   const CityContext = useGlobalState()
   
   const handleFavorites = () => {
-    const addFavorites = CityContext.favorites
-    addFavorites.push(airport)
-    // console.log('favorite set from airport', addFavorites);
-    CityContext.setFavorites(addFavorites)
-    // console.log(CityContext.favorites)
+    const addFavorites = CityContext.favorites.slice()
+    if (addFavorites.indexOf(airport) === -1) {
+      addFavorites.push(airport)
+      CityContext.setFavorites(addFavorites)
+    } else {
+      for (let i = 0; i < addFavorites.length; i++) {
+        if (addFavorites[i] === airport) {
+          addFavorites.splice(addFavorites[i])
+        }
+        CityContext.setFavorites(addFavorites)
+      }
+    }
   }
 
     return (

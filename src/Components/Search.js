@@ -13,14 +13,16 @@ const Search = (props) => {
   } 
 
   const handleSubmit = (event) => {
-    CityContext.getCity()
+    if (CityContext.city !== "") {
+      CityContext.getCity()
+    }
     // console.log('handlesubmit', CityContext.city)
   }
 
   return (
     <form className="search">
-      <input type="text" name="city" placeholder="Enter City Name" onChange={handleChange} value={CityContext.city}/>
-      <FontAwesomeIcon icon={faSearchLocation} onClick={handleSubmit}/>
+      <input type="text" name="city" placeholder="Enter City Name" onChange={handleChange} value={CityContext.city} />
+      <FontAwesomeIcon icon={faSearchLocation} onClick={handleSubmit} id="search-icon"/>
     </form>
   )
 }

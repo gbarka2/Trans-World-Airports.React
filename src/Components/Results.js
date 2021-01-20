@@ -17,6 +17,14 @@ const Results = (props) => {
         ))
         : ""
       }
+      {/* {
+        CityContext.data === undefined ?
+        <div>
+          <h1>Unable to retrieve city...</h1>
+          <p>Please check spelling of city.</p>
+        </div>
+        : ""
+      } */}
     </div>
 
 
