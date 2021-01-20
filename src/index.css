@@ -37,6 +37,24 @@ html, body {
   margin-bottom: 75px;
 }
 
+.title {
+  display: flex;
+  align-items: center;
+}
+
+#title-plane {
+  font-size: 41px;
+}
+
+#title {
+  margin-bottom: 0px;
+  padding-bottom: 8px;
+}
+
+#subtitle {
+  margin-top: 0;
+}
+
 .nav {
   display: flex;
   justify-content: space-around;

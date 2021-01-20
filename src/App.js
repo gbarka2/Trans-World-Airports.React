@@ -2,12 +2,19 @@ import {Route, Switch} from 'react-router-dom'
 import Nav from './Components/Nav'
 import Main from './Pages/Main'
 import Favorites from './Pages/Favorites';
+import {faPaperPlane} from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 function App() {
 
   return (
     <div className="app">
+      <div className="title">
+      <FontAwesomeIcon icon={faPaperPlane} id="title-plane"/>
+        <h1 id="title">AirportGPS</h1>
+      </div>
+      <p id="subtitle">Whenever you think "IATA know this..."</p>
       <Switch>
         <Route exact path="/">
           <Main />
