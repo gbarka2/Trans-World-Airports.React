@@ -1,6 +1,8 @@
 html, body {
-  height: vh100;
-  width: vw100;
+  height: 100%;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
 }
 
 .app {
@@ -15,9 +17,9 @@ html, body {
 }
 
 .main {
-  grid-column: 1 / 2;
-  grid-row: 1 / 4;
-  display: grid;
+  /* grid-column: 1 / 2;
+  grid-row: 1 / 4; */
+  /* display: grid; */
   /* grid-template-columns: 1fr;
   grid-template-rows: 1fr 2fr; */
 }
@@ -39,7 +41,9 @@ html, body {
   display: flex;
   justify-content: space-around;
   font-size: 72px;
-  border-top: blue 1px solid;
+  /* padding-top: 10px;
+  padding-bottom: 10px; */
+  padding: 10px;
   width: 100%;
   margin-right: 0px;
   background-color: black;
