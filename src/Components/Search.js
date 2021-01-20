@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faSearchLocation} from "@fortawesome/free-solid-svg-icons"
-import React, {useState} from 'react'
+import React from 'react'
 import {useGlobalState} from '../GlobalState'
 
 const Search = (props) => {

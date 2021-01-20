@@ -9,7 +9,7 @@ const Results = (props) => {
 
   return (
 
-    <>
+    <div className="results">
       {
         CityContext.data !== undefined ?
         CityContext.data.airportsByCities.map((airport, index) => (
@@ -17,7 +17,7 @@ const Results = (props) => {
         ))
         : ""
       }
-    </>
+    </div>
 
 
   )

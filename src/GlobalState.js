@@ -1,9 +1,5 @@
 import React, { createContext, useContext, useState } from 'react'
 
-const initialState = {
-  name: null
-}
-
 export const CityContext = createContext(null)
 export const useGlobalState = () => {
   return useContext(CityContext)
@@ -11,9 +7,6 @@ export const useGlobalState = () => {
 const apiKey = "289810-c1b873"
 
 export const GlobalState = (props) => {
-  const globalCity = {
-    city: ''
-  }
   
   const [city, setCity] = useState()
   const [data, setData] = useState()
