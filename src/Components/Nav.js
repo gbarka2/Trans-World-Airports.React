@@ -9,10 +9,11 @@ const Nav = (props) => {
   return (
     <div className="nav">
       <Link to="/">
-        <FontAwesomeIcon icon={faPaperPlane} />
+        {/* <FontAwesomeIcon icon={faPaperPlane} /> */}
+        <p id="twa">TWA</p>
       </Link>
       <Link to="/">
-        <FontAwesomeIcon icon={faHome} />
+        <FontAwesomeIcon icon={faHome} id="home"/>
       </Link>
       <Link to="/favorites">
         <FontAwesomeIcon icon={faHeart} />

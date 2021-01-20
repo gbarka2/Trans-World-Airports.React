@@ -12,7 +12,7 @@ function App() {
     <div className="app">
       <div className="title">
       <FontAwesomeIcon icon={faPaperPlane} id="title-plane"/>
-        <h1 id="title">AirportGPS</h1>
+        <h2 id="title">TRANS-WORLD AIRPORTS</h2>
       </div>
       <p id="subtitle">Whenever you think "IATA know this..."</p>
       <Switch>
