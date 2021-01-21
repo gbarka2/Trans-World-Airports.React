@@ -10,19 +10,21 @@ function App() {
 
   return (
     <div className="app">
-      <div className="title">
-      <FontAwesomeIcon icon={faPaperPlane} id="title-plane"/>
-        <h2 id="title">TRANS-WORLD AIRPORTS</h2>
+      <div className="title-container">
+        <div className="title">
+          <FontAwesomeIcon icon={faPaperPlane} id="title-plane"/>
+          <h2 id="title">TRANS-WORLD AIRPORTS</h2>
+        </div>
+        <p id="subtitle">Whenever you think "IATA know this..."</p>
+        <Switch>
+          <Route exact path="/">
+            <Main />
+          </Route>
+          <Route path="/favorites">
+            <Favorites/>
+          </Route>
+        </Switch>
       </div>
-      <p id="subtitle">Whenever you think "IATA know this..."</p>
-      <Switch>
-        <Route exact path="/">
-          <Main />
-        </Route>
-        <Route path="/favorites">
-          <Favorites/>
-        </Route>
-      </Switch>
       <Nav />
     </div>
   );

@@ -10,7 +10,7 @@ import {useGlobalState} from '../GlobalState'
 const Airport = ({airport, index}) => {
 
   const CityContext = useGlobalState()
-  const color = CityContext.favorites.indexOf(airport) !== -1 ? 'red' : 'gray' 
+  const color = CityContext.favorites.indexOf(airport) !== -1 ? 'red' : 'rgb(184, 180, 180)' 
   
   const handleFavorites = () => {
     const addFavorites = CityContext.favorites.slice()
@@ -20,46 +20,46 @@ const Airport = ({airport, index}) => {
       CityContext.setFavorites(addFavorites)
     } else {
       const index = addFavorites.indexOf(airport)
-      airport.color = 'gray'
+      airport.color = 'rgb(184, 180, 180)'
       addFavorites.splice(index, 1)
       CityContext.setFavorites(addFavorites)
     }
   }
 
-    return (
-      <div>
-        {
-          airport ?
-          <div className="airport-card" key={index}>
-            <div className="card-row">
-              <FontAwesomeIcon icon={faPlaneDeparture} className="airport-icon"/>
-              <p>{airport.codeIataAirport}</p>
+  return (
+    <div>
+      {
+        airport ?
+        <div className="airport-card" key={index}>
+          <div className="card-row">
+            <FontAwesomeIcon icon={faPlaneDeparture} className="airport-icon"/>
+            <p>{airport.codeIataAirport}</p>
+          </div>
+          <div className="card-row">
+            <p id="airport-name">{airport.nameAirport}</p>
+          </div>
+          <div className="card-row">
+            <FontAwesomeIcon icon={faCity} className="airport-icon"/>
+            <p>{airport.codeIataCity}</p>
+          </div>
+          <div className="card-row">
+            <FontAwesomeIcon icon={faFlag} className="airport-icon" />
+            <p>{airport.nameCountry}</p>
+          </div>
+          <div className="card-row" id="favorite-row">
+            <div id="fave-row-1">
+              <FontAwesomeIcon icon={faClock} className="airport-icon"/>
+              <p>{airport.timezone}</p>
             </div>
-            <div className="card-row">
-              <p id="airport-name">{airport.nameAirport}</p>
-            </div>
-            <div className="card-row">
-              <FontAwesomeIcon icon={faCity} className="airport-icon"/>
-              <p>{airport.codeIataCity}</p>
-            </div>
-            <div className="card-row">
-              <FontAwesomeIcon icon={faFlag} className="airport-icon" />
-              <p>{airport.nameCountry}</p>
-            </div>
-            <div className="card-row" id="favorite-row">
-              <div id="fave-row-1">
-                <FontAwesomeIcon icon={faClock} className="airport-icon"/>
-                <p>{airport.timezone}</p>
-              </div>
-              <div>
-                <FontAwesomeIcon icon={faHeart} id="heart" onClick={handleFavorites} style={{color: airport.color}}/>
-              </div>
+            <div>
+              <FontAwesomeIcon icon={faHeart} id="heart" onClick={handleFavorites} style={{color: airport.color}}/>
             </div>
           </div>
-          : ""
-        }
-      </div>
-    )
+        </div>
+        : ""
+      }
+    </div>
+  )
 }
 
 export default Airport

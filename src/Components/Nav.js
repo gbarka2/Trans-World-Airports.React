@@ -11,10 +11,10 @@ const Nav = () => {
         <p id="twa">TWA</p>
       </Link>
       <Link to="/">
-        <FontAwesomeIcon icon={faHome} id="home"/>
+        <FontAwesomeIcon icon={faHome} id="home" className="nav-icon"/>
       </Link>
       <Link to="/favorites">
-        <FontAwesomeIcon icon={faHeart} id="favorites"/>
+        <FontAwesomeIcon icon={faHeart} id="favorites" className="nav-icon"/>
       </Link>
     </div>
   )

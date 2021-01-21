@@ -8,6 +8,9 @@ const Favorites = () => {
  
   return (
     <>
+    <div className="favorite-section"> 
+      <p>Search And Favorite Your Frequented Airports!</p>
+      <div className="favorite-airport-cards">
       {
         CityContext.favorites !== undefined ?
         CityContext.favorites.map((airport, index) => (
@@ -15,6 +18,8 @@ const Favorites = () => {
         ))
         : ""
       }
+      </div>
+    </div>
     </>
 
 
