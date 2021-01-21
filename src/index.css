@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   margin: 0;
@@ -24,8 +25,6 @@ html, body {
   grid-template-rows: 1fr 2fr; */
 }
 
-
-
 .results {
   /* grid-column: 1 / 2;
   grid-row: 2 / 3; */
@@ -39,14 +38,14 @@ html, body {
 
 #title-plane {
   font-size: 41px;
-  color: #457EAC;
+  color: #0d4674;
 }
 
 #title {
   margin-bottom: 0px;
   padding-bottom: 8px;
   padding-left: 5px;
-  color: #457EAC;
+  color: #0d4674;
 }
 
 #subtitle {
@@ -62,7 +61,7 @@ html, body {
   /* padding: 10px; */
   width: 100%;
   margin-right: 0px;
-  background-color: #457EAC;
+  background-color: #457eac;
   position: fixed;
   bottom: 0;
   padding-top: 5px;
@@ -93,9 +92,9 @@ html, body {
 }
 
 input {
-  border-color: #457EAC;
+  border-color: #457eac;
   font-size: 23px;
-  color: #457EAC;
+  color: #457eac;
   border-radius: 5px;
   border-image: none;
   background-color: white;
@@ -103,21 +102,23 @@ input {
 
 #search-icon {
   font-size: 25px;
-  background-color: #457EAC;
+  background-color: #0d4674;
   padding: 4px;
   color: white;
   border-radius: 5px;
 }
 
 .airport-card {
-  height: 250px;
+  height: 255px;
   width: 225px;
   margin: 30px;
-
+  border: 4px solid #457eac;
+  border-radius: 8px;
 }
 
 .card-row {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
+  border-bottom: 2px solid #457eac;
   display: flex;
   align-items: center;
   margin: 0;
@@ -125,13 +126,14 @@ input {
 }
 
 #airport-name {
-  margin-left: 7px;
+  margin-left: 9px;
 }
 
 #favorite-row {
   display: flex;
   justify-content: ;
   align-items: center;
+  border: none;
 }
 
 #fave-row-1 {
@@ -141,9 +143,20 @@ input {
 
 .airport-icon {
   margin-right: 5px;
-  margin-left: 5px;
+  margin-left: 9px;
+  color: #0d4674;
 }
 
 #heart {
-  margin-left: 20px;
+  margin-left: 54px;
+  color: rgb(184, 180, 180);
+  border: gray;
 }
+
+/* .favorite-true {
+  color: rgb(174, 11, 11);
+}
+
+.favorite-false {
+  color: rgb(184, 180, 180);
+} */

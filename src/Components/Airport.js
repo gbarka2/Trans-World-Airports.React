@@ -7,19 +7,28 @@ import {faClock} from "@fortawesome/free-solid-svg-icons"
 import {faHeart} from "@fortawesome/free-solid-svg-icons"
 import {useGlobalState} from '../GlobalState'
 
-const Airport = ({airport}) => {
+const Airport = ({airport, key}) => {
 
   const CityContext = useGlobalState()
+
+  const colorChange = () => {
+    // let background = document.getElementById(heart).style.backgroundColor
+    // if (background == "rgb(0, 0, 0)") {
+
+    // }
+  }
   
   const handleFavorites = () => {
     const addFavorites = CityContext.favorites.slice()
     if (addFavorites.indexOf(airport) === -1) {
       addFavorites.push(airport)
       CityContext.setFavorites(addFavorites)
+      // CityContext.setColor(true)
     } else {
       for (let i = 0; i < addFavorites.length; i++) {
         if (addFavorites[i] === airport) {
           addFavorites.splice(addFavorites[i])
+          // CityContext.setColor(false)
         }
         CityContext.setFavorites(addFavorites)
       }
@@ -30,7 +39,7 @@ const Airport = ({airport}) => {
       <div>
         {
           airport ?
-          <div className="airport-card">
+          <div className="airport-card" id={key}>
             <div className="card-row">
               <FontAwesomeIcon icon={faPlaneDeparture} className="airport-icon"/>
               <p>{airport.codeIataAirport}</p>
@@ -52,6 +61,7 @@ const Airport = ({airport}) => {
                 <p>{airport.timezone}</p>
               </div>
               <div>
+                {/* <FontAwesomeIcon icon={faHeart} onClick={handleFavorites} className={color ? "favorite-true" : "favorite-false"}/> */}
                 <FontAwesomeIcon icon={faHeart} id="heart" onClick={handleFavorites}/>
               </div>
             </div>
