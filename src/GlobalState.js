@@ -25,7 +25,7 @@ export const GlobalState = (props) => {
 
   
   return (
-    <CityContext.Provider value={{data, city, setCity, getCity, favorites, setFavorites, color, setColor}}>
+    <CityContext.Provider value={{data, city, setCity, getCity, favorites, setFavorites, }}>
       {props.children}
     </CityContext.Provider>
   )

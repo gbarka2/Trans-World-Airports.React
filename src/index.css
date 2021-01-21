@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@1,700&display=swap');
+
 html,
 body {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
+  font-family: 'Cantarell', sans-serif;
 }
 
 .app {
@@ -12,6 +15,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 120px;
   /* display: grid; */
   /* grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr; */
@@ -46,10 +50,12 @@ body {
   padding-bottom: 8px;
   padding-left: 5px;
   color: #0d4674;
+  /* font-family: 'Krona One', sans-serif; */
 }
 
 #subtitle {
   margin-top: 0;
+  /* font-family: 'Krona One', sans-serif; */
 }
 
 .nav {
@@ -74,13 +80,18 @@ body {
 
 #twa {
   font-size: 48px;
-  margin-left: 10px;
+  /* margin-left: 10px; */
   margin-top: 15px;
   margin-bottom: 15px;
+  /* font-family: 'Krona One', sans-serif; */
 }
 
 #home {
-  padding-right: 24px;
+  margin-right: 20px;
+}
+
+#favorites {
+  margin-right: 19px;
 }
 
 .search {
@@ -98,6 +109,7 @@ input {
   border-radius: 5px;
   border-image: none;
   background-color: white;
+  /* font-family: 'Krona One', sans-serif; */
 }
 
 #search-icon {
@@ -108,12 +120,19 @@ input {
   border-radius: 5px;
 }
 
+.test {
+  /* margin-bottom: 10px; */
+}
+
 .airport-card {
   height: 255px;
   width: 225px;
   margin: 30px;
+  margin-bottom: 0;
   border: 4px solid #457eac;
   border-radius: 8px;
+  box-shadow: 10px 10px 5px #93c3eb;
+  /* font-family: 'Krona One', sans-serif; */
 }
 
 .card-row {
@@ -131,7 +150,7 @@ input {
 
 #favorite-row {
   display: flex;
-  justify-content: ;
+  justify-content: space-between;
   align-items: center;
   border: none;
 }
@@ -139,6 +158,7 @@ input {
 #fave-row-1 {
   display: flex;
   align-items: center;
+  /* justify-content: space-between; */
 }
 
 .airport-icon {
@@ -148,7 +168,7 @@ input {
 }
 
 #heart {
-  margin-left: 54px;
+  margin-right: 7px;
   color: rgb(184, 180, 180);
   border: gray;
 }

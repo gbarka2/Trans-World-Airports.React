@@ -16,7 +16,7 @@ const Nav = (props) => {
         <FontAwesomeIcon icon={faHome} id="home"/>
       </Link>
       <Link to="/favorites">
-        <FontAwesomeIcon icon={faHeart} />
+        <FontAwesomeIcon icon={faHeart} id="favorites"/>
       </Link>
     </div>
   )

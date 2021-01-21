@@ -5,14 +5,17 @@ import {useGlobalState} from '../GlobalState'
 const Favorites = (props) => {
 
   const CityContext = useGlobalState()
-  console.log('favorites page airports', CityContext.favorites)
+  // console.log('favorites page airports', CityContext.favorites)
   return (
 
     <>
       {
         CityContext.favorites !== undefined ?
         CityContext.favorites.map((airport, index) => (
-        <Airport airport={airport} key={index}/>
+        <div className="test">
+
+          <Airport airport={airport} index={index} key={index}/>
+        </div>
         ))
         : ""
       }
