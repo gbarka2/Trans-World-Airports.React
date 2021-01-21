@@ -4,6 +4,7 @@ export const CityContext = createContext(null)
 export const useGlobalState = () => {
   return useContext(CityContext)
 }
+
 const apiKey = "289810-c1b873"
 
 export const GlobalState = (props) => {

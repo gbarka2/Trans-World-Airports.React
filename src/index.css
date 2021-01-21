@@ -128,25 +128,16 @@ input {
   border: 4px solid #457eac;
   border-radius: 8px;
   box-shadow: 10px 10px 5px #93c3eb;
-
 }
 
-/* .results {
-  animation-name: slidein;
-  animation-duration: 4s;
-  animation-iteration-count: 2;
+.airport-card:hover {
+  box-shadow: 0 0 20px #0065b8;
 }
 
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 200%;
-  }
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-} */
+#airport-code {
+  font-size: 24px;
+  color: #0d4674;
+}
 
 .card-row {
   border-bottom: 2px solid #457eac;
@@ -247,7 +238,6 @@ input {
     display: flex;
     flex-wrap: wrap;
   }
-
 }
 
 @media screen and (min-width: 1024px) {
@@ -288,5 +278,4 @@ input {
   #title {
     font-size: 52px;
   }
-
 }

@@ -1,16 +1,15 @@
-import React, {useState} from 'react'
+import React from 'react'
+import {useGlobalState} from '../GlobalState'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPlaneDeparture} from "@fortawesome/free-solid-svg-icons"
 import {faCity} from "@fortawesome/free-solid-svg-icons"
 import {faFlag} from "@fortawesome/free-solid-svg-icons"
 import {faClock} from "@fortawesome/free-solid-svg-icons"
 import {faHeart} from "@fortawesome/free-solid-svg-icons"
-import {useGlobalState} from '../GlobalState'
 
 const Airport = ({airport, index}) => {
 
   const CityContext = useGlobalState()
-  const color = CityContext.favorites.indexOf(airport) !== -1 ? 'red' : 'rgb(184, 180, 180)' 
   
   const handleFavorites = () => {
     const addFavorites = CityContext.favorites.slice()
@@ -33,14 +32,14 @@ const Airport = ({airport, index}) => {
         <div className="airport-card" key={index}>
           <div className="card-row">
             <FontAwesomeIcon icon={faPlaneDeparture} className="airport-icon"/>
-            <p>{airport.codeIataAirport}</p>
+            <p id="airport-code">{airport.codeIataAirport}</p>
           </div>
           <div className="card-row">
             <p id="airport-name">{airport.nameAirport}</p>
           </div>
           <div className="card-row">
             <FontAwesomeIcon icon={faCity} className="airport-icon"/>
-            <p>{airport.codeIataCity}</p>
+            <p>City Code: {airport.codeIataCity}</p>
           </div>
           <div className="card-row">
             <FontAwesomeIcon icon={faFlag} className="airport-icon" />

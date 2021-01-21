@@ -1,7 +1,7 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faSearchLocation} from "@fortawesome/free-solid-svg-icons"
 import React from 'react'
 import {useGlobalState} from '../GlobalState'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faSearchLocation} from "@fortawesome/free-solid-svg-icons"
 
 const Search = () => {
 

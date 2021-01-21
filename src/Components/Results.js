@@ -1,13 +1,12 @@
 import React from 'react'
-import Airport from './Airport'
 import {useGlobalState} from '../GlobalState'
+import Airport from './Airport'
 
 const Results = () => {
 
   const CityContext = useGlobalState()
 
   return (
-
     <div className="results">
       {
         CityContext.data !== undefined ?
