@@ -24,9 +24,6 @@ function App() {
         </Route>
       </Switch>
       <Nav />
-
-      {/* switch
-      routes and paths */}
     </div>
   );
 }

@@ -9,19 +9,8 @@ import {useGlobalState} from '../GlobalState'
 
 const Airport = ({airport, index}) => {
 
-
-
   const CityContext = useGlobalState()
-  console.log(airport, index)
-
   const color = CityContext.favorites.indexOf(airport) !== -1 ? 'red' : 'gray' 
-  console.log('color', color)
-  const colorChange = () => {
-    // let background = document.getElementById(heart).style.backgroundColor
-    // if (background == "rgb(0, 0, 0)") {
-
-    // }
-  }
   
   const handleFavorites = () => {
     const addFavorites = CityContext.favorites.slice()
@@ -29,25 +18,11 @@ const Airport = ({airport, index}) => {
       airport.color = 'red'
       addFavorites.push(airport)
       CityContext.setFavorites(addFavorites)
-      console.log(addFavorites)
-      // CityContext.setColor(true)
     } else {
       const index = addFavorites.indexOf(airport)
       airport.color = 'gray'
-      console.log('index', index)
       addFavorites.splice(index, 1)
       CityContext.setFavorites(addFavorites)
-      // CityContext.setColor(false)
-      // for (let i = 0; i < addFavorites.length; i++) {
-      //   if (addFavorites[i].index === airport.index) {
-
-      //     // addFavorites.push(CityContext.favorites)
-      //     CityContext.setFavorites(addFavorites)
-      //     console.log(addFavorites)
-      //     // addFavorites.splice(airport)
-      //     // CityContext.setColor(false)
-      //   }
-      // }
     }
   }
 
@@ -77,7 +52,6 @@ const Airport = ({airport, index}) => {
                 <p>{airport.timezone}</p>
               </div>
               <div>
-                {/* <FontAwesomeIcon icon={faHeart} onClick={handleFavorites} className={color ? "favorite-true" : "favorite-false"}/> */}
                 <FontAwesomeIcon icon={faHeart} id="heart" onClick={handleFavorites} style={{color: airport.color}}/>
               </div>
             </div>

@@ -3,7 +3,7 @@ import {faSearchLocation} from "@fortawesome/free-solid-svg-icons"
 import React from 'react'
 import {useGlobalState} from '../GlobalState'
 
-const Search = (props) => {
+const Search = () => {
 
   const CityContext = useGlobalState()
 
@@ -16,7 +16,6 @@ const Search = (props) => {
     if (CityContext.city !== "") {
       CityContext.getCity()
     }
-    // console.log('handlesubmit', CityContext.city)
   }
 
   return (
