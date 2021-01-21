@@ -5,7 +5,7 @@
 ## Project Links
 
 - [Github](https://github.com/gbarka2/project2)
-- [Netlify](https://unnamed-airport-app.netlify.app/)
+- [Netlify](https://transworldairports.netlify.app/)
 
 ## Project Description
 
@@ -34,10 +34,7 @@ GlobalState will also house the state of the favorited items. When the Airport c
 
 - [React Architecture](https://res.cloudinary.com/decffa3wj/image/upload/v1610738956/project2/Snip20210115_5_ffvyeu.png)
 
-
-### MVP/PostMVP - 5min
-
-#### MVP EXAMPLE
+#### MVP
 
 - Find and use external API
 - Complete project2 markdown
@@ -47,12 +44,12 @@ GlobalState will also house the state of the favorited items. When the Airport c
 - Remove unnecessary code
 - CSS styling
 
-#### PostMVP EXAMPLE
+#### PostMVP
 
 - Enable unfavoriting feature
+- Learn some CSS animations
 
 ## Components
-
 
 Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components. 
 
@@ -68,22 +65,20 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Favorites | Page housing the FavoriteAirport component(s). Receives the favorite state from GlobalState to map into FavoriteAirport component(s) |
 | FavoriteAirport | Renders the mapped data from Favorites to a component per array element |
 
-
-
 ## Time Frames
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Finding API | H | 2hrs| 3.5hrs | 3.5hrs |
 | Complete Markdown | H | 1hrs| 2.5hrs | 2.5hrs |
-| Build Pages and Components | H | 5hrs | - | - |
-| Render Data | H | 6hrs | - | - |
-| Enable Favoriting | H | 4hrs | - | - |
-| Find Icons | L | 2hrs | - | - |
-| Remove Unnecessary Code | H | 1hrs | - | - |
-| Enable Unfavoriting | M | 6hrs | - | - |
-| CSS Styling | H | 4hrs | - | - |
-| Total | H | 31hrs| 6hrs | 6hrs |
+| Build Pages and Components | H | 5hrs | 4hrs | 4hrs |
+| Render Data | H | 6hrs | 6hrs | 6hrs |
+| Enable Favoriting | H | 4hrs | 5hrs | 5hrs |
+| Find Icons | L | 2hrs | 1hr | 1hr |
+| Remove Unnecessary Code | H | 1hrs | 1hr | 1hr |
+| Enable Unfavoriting | M | 6hrs | 4hrs | 4hrs |
+| CSS Styling | H | 4hrs | 5hrs | hrs |
+| Total | H | 31hrs| 32hrs | 32hrs |
 
 - Find and use external API
 - Complete project2 markdown
@@ -94,14 +89,26 @@ Based on the initial logic defined in the previous sections try and breakdown th
 - CSS styling
 
 ## Additional Libraries
- Use this section to list all supporting libraries and their role in the project such as Axios, ReactStrap, D3, etc. 
+
+- Fontawesome
+- Google Fonts
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description.  Code snippet should not be greater than 10 lines of code. 
+- Not necessarily a snippet, but I am proud of my use of context and global state. I was able to render data in multiple components and keep the files clean by doing this, and it gave me a much greater understanding as to how it can benefit a complex project.
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+  const handleFavorites = () => {
+    const addFavorites = CityContext.favorites.slice()
+    if (addFavorites.indexOf(airport) === -1) {
+      airport.color = 'red'
+      addFavorites.push(airport)
+      CityContext.setFavorites(addFavorites)
+    } else {
+      const index = addFavorites.indexOf(airport)
+      airport.color = 'rgb(184, 180, 180)'
+      addFavorites.splice(index, 1)
+      CityContext.setFavorites(addFavorites)
+    }
+  }
 ```
