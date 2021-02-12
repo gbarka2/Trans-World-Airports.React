@@ -16,6 +16,8 @@ export const GlobalState = (props) => {
 
   const url = `https://aviation-edge.com/v2/public/autocomplete?key=${apiKey}&city=${city}`
 
+  // const url = `https://transworldairports.netlify.app/.netlify/functions/getAirports?city=${city}`
+
   // const {url} = process.env
 
   const getCity = async () => {
