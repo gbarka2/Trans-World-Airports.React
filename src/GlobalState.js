@@ -6,6 +6,7 @@ export const useGlobalState = () => {
 }
 
 const apiKey = "289810-c1b873"
+// const {apiKey} = process.env
 
 export const GlobalState = (props) => {
   
@@ -13,7 +14,10 @@ export const GlobalState = (props) => {
   const [data, setData] = useState()
   const [favorites, setFavorites] = useState([])
 
-  const url = `http://aviation-edge.com/v2/public/autocomplete?key=${apiKey}&city=${city}`
+  const url = `https://aviation-edge.com/v2/public/autocomplete?key=${apiKey}&city=${city}`
+
+  // const {url} = process.env
+
   const getCity = async () => {
     const response = await fetch(url)
     const data = await response.json()
