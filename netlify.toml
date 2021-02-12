@@ -5,7 +5,7 @@
 [build]
     #base = the root folder for build context (where the package.json file is)
     #base = ""
-    publish = after build command is complete the folder to serve as the website
+    #publish = after build command is complete the folder to serve as the website
     # publish = "public"
     # command = the build command to run from the base directory
     # command = "npm run build"
