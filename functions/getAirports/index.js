@@ -10,12 +10,6 @@ exports.handler = async function(event, context) {
     headers: {
       "Content-Type": "application/json"
     },
-    body: JSON.stringify({
-      path,
-      httpMethod,
-      headers,
-      queryStringParameters,
-      body: myBody ? JSON.parse(myBody) : "none"
-    })
+    body: JSON.stringify(myBody)
   }
 }
