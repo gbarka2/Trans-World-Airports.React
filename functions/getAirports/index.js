@@ -14,11 +14,12 @@ exports.handler = async function(event, context) {
   const getCity = async () => {
     const response = await fetch(url)
     const data = await response.json()
-    data.airportByCities = []
-    setData(data)
+    // data.airportByCities = []
+    // setData(data)
+    return await data
   }
 
-  const myBody = {city, apiKey}
+  const myBody = await getCity()
 
   // return some JSON data with a status of 200
   return {
