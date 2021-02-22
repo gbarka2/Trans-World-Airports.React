@@ -14,9 +14,9 @@ export const GlobalState = (props) => {
   const [data, setData] = useState()
   const [favorites, setFavorites] = useState([])
 
-  const url = `https://aviation-edge.com/v2/public/autocomplete?key=${apiKey}&city=${city}`
+  // const url = `https://aviation-edge.com/v2/public/autocomplete?key=${apiKey}&city=${city}`
 
-  // const url = `https://transworldairports.netlify.app/.netlify/functions/getAirports?city=${city}`
+  const url = `https://transworldairports.netlify.app/.netlify/functions/getAirports?city=${city}`
 
   // const {url} = process.env
 
